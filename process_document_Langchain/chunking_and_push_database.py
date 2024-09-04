@@ -57,7 +57,7 @@ def processing_document(document):
                         .replace("\n- ", ".")\
                         .replace("\n+ ", ".")\
                         .replace("đ)", "d)")
-                                                                            
+    document = re.sub(r"(Điều \d+)\.", r"\1", document)                                                                        
     document=re.sub(r'\n[a-z]\) ', ".",document)
     document = re.sub(r'[\…]', '', document)  
     document = re.sub(r'[□]', '', document)
